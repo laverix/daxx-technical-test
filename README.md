@@ -2,6 +2,11 @@
 
 ![](src/assets/img/logo.png)
 
+##Pin
+```JavaScript
+2017
+```
+
 ## Installation
 ```JavaScript
 npm i
