@@ -1,0 +1,26 @@
+<div class="container">
+  <button class="button prev"
+          (click)="back()"></button>
+  <div class="card appearing amount" [hidden]="print">
+    <p class="caption">
+      Select an amount
+    </p>
+    <input type="text"
+           id="input-pin"
+           autofocus
+           required
+           maxlength="5"
+           minlength="1"
+           pattern="[0-9]+"
+           (keyup.enter)="takeCash($event)">
+  </div>
+  <div class="card appearing printing" [hidden]="!print">
+    <p class="caption">
+      Printing...
+    </p>
+    <img src="./assets/img/printing-cash.png" class="print-icon"/>
+  </div>
+  <button class="button exit"
+          (click)="exit()"></button>
+</div>
+

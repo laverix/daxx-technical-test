@@ -1,0 +1,14 @@
+<div id="card" class="appearing">
+  <p class="pin-caption">
+    Please enter PIN
+  </p>
+  <input type="password"
+         id="input-pin"
+         autofocus
+         required
+         maxlength="4"
+         minlength="4"
+         pattern="[0-9]+"
+         [disabled]="exceed"
+         (keyup.enter)="checkPin($event)">
+</div>

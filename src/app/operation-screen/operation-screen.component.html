@@ -1,0 +1,19 @@
+<div class="container">
+  <button class="button prev"
+          [disabled]="visibleItem <= 0"
+          (click)="switchOperation('prev')"></button>
+  <div class="card appearing"
+       *ngFor="let item of operations; let i = index"
+       [class.shown]="i == visibleItem"
+       [routerLink]="[item.route]">
+    <div class="operation">
+      <img class="icon" src="./assets/img/{{ item.icon }}.png"/>
+      <h2>
+        {{ item.title }}
+      </h2>
+    </div>
+  </div>
+  <button class="button next"
+          [disabled]="visibleItem >= operations.length - 1"
+          (click)="switchOperation('next')"></button>
+</div>
